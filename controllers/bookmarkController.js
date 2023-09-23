@@ -21,7 +21,7 @@ router.delete("/:id", async(req,res) =>{
 })
 
 //UPDATE
-router.post("update/:id", async (req,res) =>{
+router.post("/update/:id", async (req,res) =>{
     try{
         res.json(await Bookmark.findByIdAndUpdate(req.params.id, req.body,{ new:true}))
     }catch{
