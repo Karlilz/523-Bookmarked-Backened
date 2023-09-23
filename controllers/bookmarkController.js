@@ -2,7 +2,6 @@ const express = require('express');
 const Bookmark = require('../models/Bookmark');
 const router = express.Router();
 
-//INDUCES
 //INDEX
 router.get ("/", async (req,res) =>{
      try{
@@ -22,7 +21,7 @@ router.delete("/:id", async(req,res) =>{
 })
 
 //UPDATE
-router.put("/:id", async (req,res) =>{
+router.post("update/:id", async (req,res) =>{
     try{
         res.json(await Bookmark.findByIdAndUpdate(req.params.id, req.body,{ new:true}))
     }catch{
