@@ -11,4 +11,4 @@ mongoose.connection
     .on("close", () => console.log("Connection Close"))
     .on("error", (e) => console.log("Error occured:", e))
 
-module.exports = mongoose
+module.exports = mongoosex
